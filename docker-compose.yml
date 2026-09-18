@@ -22,7 +22,7 @@ services:
         - NEXT_PUBLIC_ENABLE_PPTX_IMPORT=${NEXT_PUBLIC_ENABLE_PPTX_IMPORT:-}
         - NEXT_PUBLIC_PRO_WORKBENCH_ENABLED=${NEXT_PUBLIC_PRO_WORKBENCH_ENABLED:-}
     ports:
-      - '3000:3000'
+      - '${WEB_PORT}:3000'
     environment:
       # Point the app at the render service when it's running. This wins over any
       # RENDER_SERVICE_URL in .env.local; the service only starts under the
